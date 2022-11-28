@@ -1,0 +1,7 @@
+com\mycompany\modelo\UserDto.class
+com\mycompany\modelo\IDao.class
+com\mycompany\vista\Formulario.class
+com\mycompany\vista\Formulario$2.class
+com\mycompany\modelo\UserDao.class
+com\mycompany\vista\Formulario$1.class
+com\mycompany\controlador\Controlador.class
