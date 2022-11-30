@@ -13,7 +13,7 @@ import Control.Controlador;
  * @author mikev_6wadxan
  */
 public class ProyectoFina {
-
+int a;
     public static void main(String[] args) {
       Control.Controlador objC=new Controlador();
       objC.iniciar();
