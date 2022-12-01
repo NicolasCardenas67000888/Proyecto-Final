@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package com.mycompany.Proyecto_Final.mvc;
+
+import com.mycompany.Proyecto_Final.vista.Menu;
 
 /**
  *
  * @author Usuario
  */
-public class Nnn {
-    
+public class Main {
+     public static void main (String[] args){
+        Menu menu = new Menu ();
+    }
 }
