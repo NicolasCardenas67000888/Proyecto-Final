@@ -6,6 +6,8 @@
 package com.mycompany.proyectofina;
 
 import Control.Controlador;
+import Control.Controlador2;
+import Vista.Ventana;
 
 
 /**
@@ -14,8 +16,22 @@ import Control.Controlador;
  */
 public class ProyectoFina {
 int a;
+
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
       Control.Controlador objC=new Controlador();
       objC.iniciar();
+      Control.Controlador2 objD=new Controlador2();
+      objD.iniciar2();
+      
+
+      
+    }
+    public static void main2(String[]args){
+    Control.Controlador2 objD=new Controlador2();
+      objD.iniciar2();
     }
 }

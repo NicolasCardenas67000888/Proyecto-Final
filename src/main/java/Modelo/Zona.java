@@ -9,10 +9,10 @@ package Modelo;
  * @author mikev_6wadxan
  */
 public class Zona {
-  private String direccion,localidad;
-  private int daño;
+  private String direccion,localidad,daño;
+  
 
-    public Zona(String direccion, String localidad, int daño) {
+    public Zona(String direccion, String localidad, String daño) {
         this.direccion = direccion;
         this.localidad = localidad;
         this.daño = daño;
@@ -21,7 +21,7 @@ public class Zona {
         public Zona() {
         this.direccion = "";
         this.localidad = "";
-        this.daño = 0;
+        this.daño = "";
     }
 
     public String getDireccion() {
@@ -40,11 +40,11 @@ public class Zona {
         this.localidad = localidad;
     }
 
-    public int getDaño() {
+    public String getDaño() {
         return daño;
     }
 
-    public void setDaño(int daño) {
+    public void setDaño(String daño) {
         this.daño = daño;
     }
 

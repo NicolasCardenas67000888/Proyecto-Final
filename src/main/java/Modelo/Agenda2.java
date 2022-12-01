@@ -30,7 +30,11 @@ public class Agenda2 {
 
     @Override
     public String toString() {
-        return "Agenda2{" + "ListaB=" + ListaB + '}';
+        String datos2="";
+        for(int i=0;i<ListaB.size();i++){
+        datos2+=ListaB.get(i).toString()+"\n";
+        }
+        return   "Lista Zona dañada=" + datos2;
     }
      
      

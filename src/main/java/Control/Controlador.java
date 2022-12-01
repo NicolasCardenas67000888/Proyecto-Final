@@ -5,6 +5,7 @@
 package Control;
 
 import Modelo.Agenda;
+
 import Modelo.Persona;
 import Vista.Ventana;
 import java.awt.Component;
@@ -82,6 +83,8 @@ ven.setVisible(true);
     }
     
     }
+    
+
     
     
 }

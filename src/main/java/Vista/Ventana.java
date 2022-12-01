@@ -4,8 +4,11 @@
  */
 package Vista;
 
+import javax.accessibility.AccessibleContext;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRootPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
@@ -49,10 +52,31 @@ public class Ventana extends javax.swing.JFrame {
         tblContactos = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        btnMostrar2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblTabla2 = new javax.swing.JTable();
+        jPnRegistro2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        btnAgregar2 = new javax.swing.JButton();
+        txtDireccion = new javax.swing.JTextField();
+        txtLocalidad = new javax.swing.JTextField();
+        txtTipodaño = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTabbedPane1.setBackground(new java.awt.Color(204, 204, 204));
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTabbedPane1.setFont(new java.awt.Font("Sitka Text", 0, 18)); // NOI18N
 
@@ -193,10 +217,343 @@ public class Ventana extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Sitka Text", 0, 18)); // NOI18N
         jLabel6.setText("Por favor ingrese sus datos para poder enviar la información a las entidades competentes ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 760, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 760, -1));
+
+        jTabbedPane2.setBackground(new java.awt.Color(204, 204, 204));
+        jTabbedPane2.setFont(new java.awt.Font("Sitka Text", 0, 18)); // NOI18N
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        btnMostrar2.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        btnMostrar2.setText("Mostrar");
+        btnMostrar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrar2ActionPerformed(evt);
+            }
+        });
+
+        tblTabla2.setBackground(new java.awt.Color(204, 204, 204));
+        tblTabla2.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        tblTabla2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Direccion", "Localidad", "Tipo daño"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tblTabla2.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tblTabla2);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnMostrar2)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(btnMostrar2)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Consulta", jPanel1);
+
+        jPnRegistro2.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel8.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel8.setText("Direccion ");
+
+        jLabel9.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel9.setText("Localidad");
+
+        jLabel10.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel10.setText("Tipo de daño");
+
+        btnAgregar2.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        btnAgregar2.setText("Agregar");
+
+        jLabel12.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel12.setText("Califique el tipo de daño: ");
+
+        jLabel13.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel13.setText("*ALTO");
+
+        jLabel14.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel14.setText("*MEDIO");
+
+        jLabel15.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        jLabel15.setText("*BAJO");
+
+        javax.swing.GroupLayout jPnRegistro2Layout = new javax.swing.GroupLayout(jPnRegistro2);
+        jPnRegistro2.setLayout(jPnRegistro2Layout);
+        jPnRegistro2Layout.setHorizontalGroup(
+            jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPnRegistro2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addGap(97, 97, 97)
+                .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtLocalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(btnAgregar2)
+                .addGap(77, 77, 77))
+            .addGroup(jPnRegistro2Layout.createSequentialGroup()
+                .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPnRegistro2Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel7))
+                    .addGroup(jPnRegistro2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPnRegistro2Layout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addGap(115, 115, 115))
+                            .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel13)
+                                .addComponent(jLabel14)
+                                .addComponent(jLabel15))
+                            .addGroup(jPnRegistro2Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(34, 34, 34)
+                                .addComponent(txtTipodaño, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPnRegistro2Layout.setVerticalGroup(
+            jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPnRegistro2Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(btnAgregar2)
+                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtLocalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel14)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPnRegistro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(txtTipodaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(172, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Registrar zona", jPnRegistro2);
+
+        getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 520, 450));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, -1, -1));
+
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JPanel getjPnRegistro2() {
+        return jPnRegistro2;
+    }
+
+    public void setjPnRegistro2(JPanel jPnRegistro2) {
+        this.jPnRegistro2 = jPnRegistro2;
+    }
+
+
+    public JButton getBtnAgregar2() {
+        return btnAgregar2;
+    }
+
+    public void setBtnAgregar2(JButton btnAgregar2) {
+        this.btnAgregar2 = btnAgregar2;
+    }
+
+    public JButton getBtnMostrar2() {
+        return btnMostrar2;
+    }
+
+    public void setBtnMostrar2(JButton btnMostrar2) {
+        this.btnMostrar2 = btnMostrar2;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JPanel getjPanel3() {
+        return jPnRegistro2;
+    }
+
+    public void setjPanel3(JPanel jPanel3) {
+        this.jPnRegistro2 = jPanel3;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JTabbedPane getjTabbedPane2() {
+        return jTabbedPane2;
+    }
+
+    public void setjTabbedPane2(JTabbedPane jTabbedPane2) {
+        this.jTabbedPane2 = jTabbedPane2;
+    }
+
+    public JTable getTblTabla2() {
+        return tblTabla2;
+    }
+
+    public void setTblTabla2(JTable tblTabla2) {
+        this.tblTabla2 = tblTabla2;
+    }
+
+    public JTextField getTxtDireccion() {
+        return txtDireccion;
+    }
+
+    public void setTxtDireccion(JTextField txtDireccion) {
+        this.txtDireccion = txtDireccion;
+    }
+
+    public JTextField getTxtLocalidad() {
+        return txtLocalidad;
+    }
+
+    public void setTxtLocalidad(JTextField txtLocalidad) {
+        this.txtLocalidad = txtLocalidad;
+    }
+
+    public JTextField getTxtTipodaño() {
+        return txtTipodaño;
+    }
+
+    public void setTxtTipodaño(JTextField txtTipodaño) {
+        this.txtTipodaño = txtTipodaño;
+    }
 
     public JPanel getJpnRegistro() {
         return jpnRegistro;
@@ -209,6 +566,10 @@ public class Ventana extends javax.swing.JFrame {
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMostrarActionPerformed
+
+    private void btnMostrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMostrar2ActionPerformed
 
     public JButton getBtnAgregar() {
         return btnAgregar;
@@ -295,20 +656,40 @@ public class Ventana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnAgregar2;
     private javax.swing.JButton btnMostrar;
+    private javax.swing.JButton btnMostrar2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPnRegistro2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel jpnRegistro;
     private javax.swing.JTable tblContactos;
+    private javax.swing.JTable tblTabla2;
     private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtLocalidad;
     private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtTipodaño;
     private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
 }

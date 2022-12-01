@@ -15,10 +15,23 @@ public class Agenda {
 
     public Agenda(ArrayList<Persona> ListaC) {
         this.ListaC = ListaC;
+        
+        
     }
       public Agenda() {
         this.ListaC = new ArrayList<Persona>();
         
+    }
+      
+          @Override
+    public String toString() {
+        String datos="";
+        for(int i=0;i<ListaC.size();i++){
+        datos+=ListaC.get(i).toString()+"\n";
+        
+        }
+               
+        return  "Lista Contactos=" + datos;
     }
 
     public ArrayList<Persona> getListaC() {
@@ -29,15 +42,6 @@ public class Agenda {
         this.ListaC = ListaC;
     }
 
-    @Override
-    public String toString() {
-        String datos="";
-        for(int i=0;i<ListaC.size();i++){
-        datos+=ListaC.get(i).toString()+"\n";
-        
-        }
-               
-        return  "Lista Contactos=" + datos;
-    }
+
       
 }
